@@ -49,7 +49,7 @@ http://localhost:3000/api/products/id_1
 ```
 
 * Revisit the GET API http://localhost:3000/api/list and you'll notice the inventory count has decreased by 1
-* You're unable to purchase an out of stock item or enough purchases reduce its inventory to 0
+* You're unable to purchase an out of stock item or if enough purchases reduce its inventory to 0. On purchasing an out-of-stock item, a message will pop up stating the item is out of stock
 > All Marketplace products are persisted in a JSON file. This 'mock db' was done for simplicity but ideally Mongo DB or SQL databases would be used 
 
 ### Postman
