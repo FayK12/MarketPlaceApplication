@@ -10,12 +10,12 @@ node -v
 ```
 Node was v8.11.4 for me 
 ```
-npm - v 
+npm -v 
 ``` 
 NPM was v6.4.1 for me
 
 ### Setup
-* Create a folder. Download the code here & unzip the contents: https://github.com/FayK12/ShopifyApplication
+* Create a folder on your desktop. Download the repo here & unzip the contents: https://github.com/FayK12/ShopifyApplication
 * Delete the node modules folder
 * Open command prompt and navigate to the folder with the unzipped contents
 * Enter the command 
@@ -30,7 +30,7 @@ node app.js
 ```
 This starts the server at http://localhost:3000/
 
-### How To's
+### Marketplace How To's
 * For all products: 				        GET http://localhost:3000/api/list
 * For available inventory items: 	GET http://localhost:3000/api/list?inventory=true
 * To make a purchase, use its id: 	PUT http://localhost:3000/api/products/id_1
