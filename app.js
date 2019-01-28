@@ -26,12 +26,6 @@ let mockDB;
 //allows express to use the parsed JSON in req.body
 app.use(bodyParser.json());
 
-/*
-Async file read reads the JSON file with the marketplace products
-and parses it into JavaScript Object
-@param {string}err - error message
-@param {JSON}data - data from products.json
-*/
 fs.readFile('products.json', (err, data) => {  
 	if (err) throw err;
 	mockDB = JSON.parse(data);
@@ -39,8 +33,8 @@ fs.readFile('products.json', (err, data) => {
 
 /*
 Handle the API GET request
-@param {JavaScript object}req - request object
-@param {JavaScript object}res - response object
+@param {object}req - request object
+@param {object}res - response object
 */
 function handleGetRequest (req, res){
 	//parse the URL to get the query parameters
@@ -76,8 +70,8 @@ function handleGetRequest (req, res){
 
 /*
 Handle the API PUT request
-@param {JavaScript object}req - request object
-@param {JavaScript object}res - response object
+@param {object}req - request object
+@param {object}res - response object
 */
 function handlePutRequest (req, res) {
 	//parse the URL to get the product id
@@ -101,7 +95,7 @@ function handlePutRequest (req, res) {
 
 /*
 Persists the inventory changes by writing to the JSON file
-@param {JavaScript object}mockDB - all products with their title, price, inventory_count
+@param {object}mockDB - all products with their title, price, inventory_count
 */
 function updateDB(mockDB){
 	let updatedDB = JSON.stringify(mockDB); 
