@@ -31,9 +31,18 @@ node app.js
 This starts the server at http://localhost:3000/
 
 ### Marketplace How To's
-* For all products: 				        GET http://localhost:3000/api/list
-* For available inventory items: 	GET http://localhost:3000/api/list?inventory=true
-* To make a purchase, use its id: 	PUT http://localhost:3000/api/products/:id
+* For all products:
+```
+GET http://localhost:3000/api/list
+```
+* For available inventory items:
+```
+GET http://localhost:3000/api/list?inventory=true
+```
+* To make a purchase, use its id: 
+```
+PUT http://localhost:3000/api/products/:id
+```
 For example
 ```
 http://localhost:3000/api/products/id_1
@@ -41,5 +50,8 @@ http://localhost:3000/api/products/id_1
 
 * Revisit the GET API http://localhost:3000/api/list and you'll notice the inventory count has decreased by 1
 * You're unable to purchase an out of stock item or enough purchases reduce its inventory to 0
-* All Marketplace products are persisted in a JSON file. This 'mock db' was done for simplicity but ideally Mongo DB or SQL databases would be used 
+> All Marketplace products are persisted in a JSON file. This 'mock db' was done for simplicity but ideally Mongo DB or SQL databases would be used 
 
+### Postman
+
+You'll find an export of postman collections used in testing the GET and PUT APIs. In order to use the same collection, please import the collection found in the folder 'postman'
