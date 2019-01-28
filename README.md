@@ -33,7 +33,12 @@ This starts the server at http://localhost:3000/
 ### Marketplace How To's
 * For all products: 				        GET http://localhost:3000/api/list
 * For available inventory items: 	GET http://localhost:3000/api/list?inventory=true
-* To make a purchase, use its id: 	PUT http://localhost:3000/api/products/id_1
+* To make a purchase, use its id: 	PUT http://localhost:3000/api/products/:id
+For example
+```
+http://localhost:3000/api/products/id_1
+```
+
 * Revisit http://localhost:3000/api/list and you'll notice the inventory count has decreased by 1
 * You're unable to purchase an out of stock item or enough purchases reduce its inventory to 0
 
