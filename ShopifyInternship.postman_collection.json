@@ -10,7 +10,7 @@
 		{
 			"name": "PUT products",
 			"request": {
-				"url": "localhost:3000/api/products/id_",
+				"url": "localhost:3000/api/products/id_1",
 				"method": "PUT",
 				"header": [
 					{
@@ -24,15 +24,12 @@
 						"description": ""
 					}
 				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"count\": 2\n}"
-				},
+				"body": {},
 				"description": ""
 			},
 			"response": [
 				{
-					"id": "4e9a46e7-f36c-4738-8294-2f98884bae36",
+					"id": "0f6f2d35-0467-4b7c-9a9d-9444defe0880",
 					"name": "PUT products",
 					"originalRequest": {
 						"url": "localhost:3000/api/products/id_1",
@@ -108,6 +105,50 @@
 			"name": "GET products",
 			"request": {
 				"url": "localhost:3000/api/list",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"count\": 2\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET inventory",
+			"request": {
+				"url": {
+					"raw": "localhost:3000/api/list?inventory=true",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"list"
+					],
+					"query": [
+						{
+							"key": "inventory",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
 				"method": "GET",
 				"header": [
 					{
