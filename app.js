@@ -70,7 +70,6 @@ function handleGetRequest (req, res){
 		}
 	}//what to do if there are no query params
 	else {	
-		console.log(mockDB.totalProducts);
 		res.send(mockDB);
 	}
 }
@@ -97,6 +96,7 @@ function handlePutRequest (req, res) {
 	}
 	//function call which persists the inventory changes by writing to the JSON file
 	updateDB(mockDB);
+	res.end();
 }
 
 /*
