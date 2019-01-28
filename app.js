@@ -70,7 +70,6 @@ function handleGetRequest (req, res){
 		}
 	}//what to do if there are no query params
 	else {	
-		console.log(mockDB.totalProducts);
 		res.send(mockDB);
 	}
 }
@@ -97,6 +96,7 @@ function handlePutRequest (req, res) {
 	}
 	//function call which persists the inventory changes by writing to the JSON file
 	updateDB(mockDB);
+	res.end();
 }
 
 /*
@@ -116,13 +116,22 @@ function updateDB(mockDB){
 app.get("/", (req, res, next) => {
 	res.write("Welcome to the Amazonian Marketplace - your one stop shop for everything (even Shawarma)")
 	res.write("\n");
+	res.write("\n");
 	res.write("These are the APIs to use:");
+	res.write("\n");
 	res.write("\n");
 	res.write("For all products: 				GET http://localhost:3000/api/list");
 	res.write("\n");
-	res.write("For available inventory items: 	GET http://localhost:3000/api/list?inventory=true");
+	res.write("For available inventory items: 			GET http://localhost:3000/api/list?inventory=true");
+	res.write("\n");
+	res.write("To make a purchase, use the product's id: 	PUT http://localhost:3000/api/products/:id");
+	res.write("\n");
+	res.write("You'll notice its inventory_count changes if you get all the products again");
+	res.write("\n");
+	res.write("Out of stock items can't be purchased");
+	res.write("\n");
+	res.write("\n");
 	res.end();
-	res.write("To make a purchase,use its id: 	PUT http://localhost:3000/api/products/:id");
 });
 
 //route to product list
