@@ -15,7 +15,7 @@ npm -v
 NPM was v6.4.1 for me
 
 ### Setup
-* Create a folder on your desktop. Download the repo here & unzip the contents: https://github.com/FayK12/ShopifyApplication
+* Create a folder on your desktop. Download the repo here & unzip the contents: https://github.com/FayK12/MarketPlaceApplication
 * Delete the node modules folder
 * Open command prompt and navigate to the folder with the unzipped contents
 * Enter the command 
