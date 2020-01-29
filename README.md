@@ -1,4 +1,4 @@
-# ShopifyApplication
+# MarketPlaceApplication
 
 ### Prerequisites
 * You'll need to install the latest stable release of Node.js and npm. 
